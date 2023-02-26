@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Font Awesome code -->
+<script src="https://kit.fontawesome.com/80fde57b69.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container flex justify-between bg-base-100 shadow-2xl px-10 md:px-20 mt-5 w-[91%] py-4 mx-auto rounded-xl bg-cyan-100">
+            <div class="">
+                <h2 class="text-xl font-bold">Interactive</h2>
+                <h5 class="text-base">Geometry Genius</h5>
+            </div>
+            <div class="">
+              <button id="btn-blog" onclick="joinfunction()" class="btn btn-primary rounded-xl">Blog</button>
+            </div>
+          </div>
+    </header>
+    <main>
+        <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
+            <div class="angel-details mt-5 w-[70%] grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <!-- Triangle -->
+                <div class="card w-full bg-base-100 shadow-xl component" id="">
+                    <figure class="px-8 pt-8">
+                      <img src="images/triangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="triangle-name" class="card-title">Triangle</h2>
+                      <p>Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> b <i class="fa-solid fa-xmark"></i> h</p>
+                      
+                      <div class="flex flex-row w-full">
+                        <input id="triangle-base" type="text" placeholder="b" class="input input-bordered input-sm w-[30%] max-w-xs" />
+                        <p>cm</p>
+                        <input id="triangle-height" type="text" placeholder="h" class="input input-bordered input-sm w-[30%] max-w-xs" />
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-triangle" class="btn btn-primary btn-wide">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Rectangle -->
+                <div class="card w-full bg-base-100 shadow-xl component">
+                    <figure class="px-8 pt-8">
+                      <img src="images/rectangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="rectangle-name" class="card-title">Rectangle</h2>
+                      <p>Area (A) = w <i class="fa-solid fa-xmark"></i> l</p>
+                      
+                      <div class="flex flex-row w-full">
+                        <input id="rectangle-width" type="text" placeholder="w" class="input input-bordered input-sm w-[30%] max-w-xs" />
+                        <p>cm</p>
+                        <input id="rectangle-length" type="text" placeholder="l" class="input input-bordered input-sm w-[30%] max-w-xs" />
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-rectangle" class="btn btn-primary btn-wide">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Parallelogram -->
+                <div class="card w-full bg-base-100 shadow-xl component">
+                    <figure class="px-8 pt-8">
+                      <img src="images/parallelogram.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="parallelogram-name" class="card-title">Parallelogram</h2>
+                      <p>Area (A) = b <i class="fa-solid fa-xmark"></i> h</p>
+                      
+                      <div class="flex flex-row w-full">
+                        <input id="parallelogram-base" type="text" placeholder="b" class="input input-bordered input-sm w-[30%] max-w-xs" />
+                        <p>cm</p>
+                        <input id="parallelogram-height" type="text" placeholder="h" class="input input-bordered input-sm w-[30%] max-w-xs" />
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-parallelogram" class="btn btn-primary btn-wide">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Rhombus -->
+                <div class="card w-full bg-base-100 shadow-xl component">
+                    <figure class="px-8 pt-8">
+                      <img src="images/rhombus.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="rhombus-name" class="card-title">Rhombus</h2>
+                      <p>Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> d1 <i class="fa-solid fa-xmark"></i> d2</p>
+                      
+                      <div class="flex flex-row w-full">
+                        <input id="rhombus-d1" type="text" placeholder="d1" class="input input-bordered input-sm w-[30%] max-w-xs" />
+                        <p>cm</p>
+                        <input id="rhombus-d2" type="text" placeholder="d2" class="input input-bordered input-sm w-[30%] max-w-xs" />
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-rhombus" class="btn btn-primary btn-wide">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Pentagon -->
+                <div class="card w-full bg-base-100 shadow-xl component">
+                    <figure class="px-8 pt-8">
+                      <img src="images/pentagon.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="pentagon-name" class="card-title">Pentagon</h2>
+                      <p>Area (A) = 0.5 <i class="fa-solid fa-xmark"></i> p <i class="fa-solid fa-xmark"></i> b</p>
+                      
+                      <div class="flex flex-row w-full">
+                        <input id="pentagon-p" type="text" placeholder="p" class="input input-bordered input-sm w-[30%] max-w-xs" />
+                        <p>cm</p>
+                        <input id="pentagon-b" type="text" placeholder="b" class="input input-bordered input-sm w-[30%] max-w-xs" />
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-pentagon" class="btn btn-primary btn-wide">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Ellipse -->
+                <div class="card w-full bg-base-100 shadow-xl component">
+                    <figure class="px-8 pt-8">
+                      <img src="images/ellipse.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="ellipse-name" class="card-title">Ellipse</h2>
+                      <p>Area (A) = &pi;ab</p>
+                      
+                      <div class="flex flex-row w-full">
+                        <input id="ellipse-a" type="text" placeholder="a" class="input input-bordered input-sm w-[30%] max-w-xs" />
+                        <p>cm</p>
+                        <input id="ellipse-b" type="text" placeholder="b" class="input input-bordered input-sm w-[30%] max-w-xs" />
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-ellipse" class="btn btn-primary btn-wide">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <!-- Calculation Area -->
+            <div class="calculation-details w-full lg:w-[28%] mx-auto">
+              <h1 class="text-xl text-center font-bold underline mt-5">Area Calculation</h1>
+              <div class="overflow-x-auto">
+                <table class="table w-full">
+                  <!-- head -->
+                  <thead>
+                    <tr>
+                      <!-- <th>No</th>
+                      <th>Name</th>
+                      <th>Total</th>
+                      <th>Convert</th> -->
+                    </tr>
+                  </thead>
+                  <tbody id="table-container">
+                    <!-- row 1 -->
+                    <!-- <tr>
+                      <th>1</th>
+                      <td>Cy Ganderton</td>
+                      <td>Quality Control Specialist</td>
+                      <td>Quality Control Specialist</td>
+                    </tr> -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+        </section>
+    </main>
+    <!-- JavaScrip File Added -->
+    <script src="js/calculation.js"></script>
+    <script src="js/common.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $(".component").hover(function(){
+                var r = Math.floor(Math.random() * 255);
+                var g = Math.floor(Math.random() * 255);
+                var b = Math.floor(Math.random() * 255);
+                 var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+                 $(this).css("background-color",color);
+                })
+                
+            });
+        </script>
+</body>
+</html>
